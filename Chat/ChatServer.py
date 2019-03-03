@@ -19,6 +19,7 @@ def handle_client(client):  # Takes client socket as argument.
     welcome = 'Welcome %s! If you ever want to quit, type {quit} to exit.' % name
     client.send(bytes(welcome, "utf8"))
     msg = "%s has joined the chat!" % name
+    print(msg)
     broadcast(bytes(msg, "utf8"))
     clients[client] = name
 
